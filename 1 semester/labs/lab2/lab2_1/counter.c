@@ -27,13 +27,13 @@ int main(void) {
 
     int n;
     double product = 1.0;
-    // c.assignments++; // product assignment
+    c.assignments++; // product assignment
 
     printf("Enter count of product elements: ");
     scanf("%d", &n);
-    // c.assignments++; // n assignment
+    c.assignments++; // n assignment
 
-    // c.assignments++; // i assignment
+    c.assignments++; // i assignment
     for (int i = 1; i <= n; i++) {
         c.comperisons++; // i <= n
 
