@@ -7,20 +7,20 @@ struct coords {
   short column;
 };
 
-void init_matrix(const short rows, const short columns, int matrix[rows][columns]) {
+void init_matrix(const unsigned short rows, const unsigned short columns, double matrix[rows][columns]) {
   printf("Input elements of matrix:\n");
   print_line();
 
   for (short row = 0; row < rows; row++) {
     for (short column = 0; column < columns; column++) {
       printf("Input element (%hu; %hu):", row + 1, column + 1);
-      scanf("%d", &matrix[row][column]);
+      scanf("%lf", &matrix[row][column]);
     }
     print_line();
   }
 }
 
-int find_element_pos(const short rows, const short columns, int matrix[rows][columns], const int target_value, struct coords *pos) {
+short find_element_pos(const unsigned short rows, const unsigned short columns, double matrix[rows][columns], const double target_value, struct coords *pos) {
   printf("Start search...\n");
   print_line();
 
@@ -38,8 +38,8 @@ int find_element_pos(const short rows, const short columns, int matrix[rows][col
 }
 
 int main(void) {
-  short rows_count, columns_count;
-  int target_value;
+  unsigned short rows_count, columns_count;
+  double target_value;
 
   print_line();
   printf("Input rows count:");
@@ -53,14 +53,14 @@ int main(void) {
     return -1;
   }
 
-  int matrix[rows_count][columns_count];
+  double matrix[rows_count][columns_count];
   init_matrix(rows_count, columns_count, matrix);
 
   printf("Input target value:");
-  scanf("%d", &target_value);
+  scanf("%lf", &target_value);
 
   struct coords pos;
-  const int status = find_element_pos(rows_count, columns_count, matrix, target_value, &pos);
+  const short status = find_element_pos(rows_count, columns_count, matrix, target_value, &pos);
 
   switch (status) {
     case 0:
