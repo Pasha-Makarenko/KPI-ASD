@@ -11,8 +11,10 @@ void init_matrix(const unsigned short rows, const unsigned short columns, double
   printf("Input elements of matrix:\n");
   print_line();
 
-  for (short row = 0; row < rows; row++) {
-    for (short column = 0; column < columns; column++) {
+  for (unsigned short row = 0; row < rows; row++) {
+    printf("Row %hu:\n", row + 1);
+
+    for (unsigned short column = 0; column < columns; column++) {
       printf("Input element (%hu; %hu):", row + 1, column + 1);
       scanf("%lf", &matrix[row][column]);
     }
@@ -24,8 +26,8 @@ short find_element_pos(const unsigned short rows, const unsigned short columns, 
   printf("Start search...\n");
   print_line();
 
-  for (short column = 0; column < rows; column++) {
-    for (short row = 0; row < columns; row++) {
+  for (unsigned short column = 0; column < rows; column++) {
+    for (unsigned short row = 0; row < columns; row++) {
       if (matrix[row][column] == target_value) {
         pos->row = row + 1;
         pos->column = column + 1;
@@ -58,6 +60,7 @@ int main(void) {
 
   printf("Input target value:");
   scanf("%lf", &target_value);
+  print_line();
 
   struct coords pos;
   const short status = find_element_pos(rows_count, columns_count, matrix, target_value, &pos);
