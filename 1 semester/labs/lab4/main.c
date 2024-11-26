@@ -26,7 +26,7 @@ enum COLORS {
 
 const int width = 80;
 const int height = 24;
-const useconds_t delay = 100000;
+const useconds_t delay = 10000;
 
 enum SYMBOLS get_symbol(const int iteration) {
   if (iteration == 0) {
@@ -69,18 +69,18 @@ void mutate_pos(
 
   pos->Y = temp % 2 == 0
     ? side == left
-      ? height - iteration % height
-      : iteration % height + 1
+      ? height - iteration % height - 1
+      : iteration % height
     : side == left
-      ? iteration % height + 1
-      : height - iteration % height;
+      ? iteration % height
+      : height - iteration % height - 1;
 
   switch (side) {
     case left:
-      pos->X = width / 2 - temp;
+      pos->X = width / 2 - temp - 1;
       break;
     case right:
-      pos->X = width / 2 + temp + 1;
+      pos->X = width / 2 + temp;
       break;
   }
 }
