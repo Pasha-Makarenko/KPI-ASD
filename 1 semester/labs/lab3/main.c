@@ -12,10 +12,10 @@ void init_matrix(const unsigned short rows, const unsigned short columns, double
   print_line();
 
   for (unsigned short row = 0; row < rows; row++) {
-    printf("Row %hu:\n", row + 1);
+    printf("Row %hu:\n", row);
 
     for (unsigned short column = 0; column < columns; column++) {
-      printf("Input element (%hu; %hu):", row + 1, column + 1);
+      printf("Input element (%hu; %hu):", row, column);
       scanf("%lf", &matrix[row][column]);
     }
     print_line();
@@ -29,8 +29,8 @@ short find_element_pos(const unsigned short rows, const unsigned short columns, 
   for (unsigned short column = 0; column < rows; column++) {
     for (unsigned short row = 0; row < columns; row++) {
       if (matrix[row][column] == target_value) {
-        pos->row = row + 1;
-        pos->column = column + 1;
+        pos->row = row;
+        pos->column = column;
         return 0;
       }
     }
