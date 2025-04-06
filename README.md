@@ -18,3 +18,11 @@ Welcome to the **KPI-ASD** repository! This repository contains project assignme
 
 ### 📖 Module Control Work
 - **MCW**: [Approximation](./1%20semester/mcw)
+
+---
+
+## 📅 2nd Semester
+
+### 🔬 Labs
+- **Lab 1**: [Recursion](./2%20semester/labs/lab1)
+- **Lab 2**: [Linked lists](./2%20semester/labs/lab2)
