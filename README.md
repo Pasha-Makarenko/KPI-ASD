@@ -26,3 +26,4 @@ Welcome to the **KPI-ASD** repository! This repository contains project assignme
 ### 🔬 Labs
 - **Lab 1**: [Recursion](./2%20semester/labs/lab1)
 - **Lab 2**: [Linked lists](./2%20semester/labs/lab2)
+- **Lab 2**: [Rendering graph](./2%20semester/labs/lab3)
