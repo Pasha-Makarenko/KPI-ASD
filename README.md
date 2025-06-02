@@ -28,3 +28,5 @@ Welcome to the **KPI-ASD** repository! This repository contains project assignme
 - **Lab 2**: [Linked lists](./2%20semester/labs/lab2)
 - **Lab 3**: [Rendering graph](./2%20semester/labs/lab3)
 - **Lab 4**: [Exploring graph](./2%20semester/labs/lab4)
+- **Lab 5**: [Graph traversal](./2%20semester/labs/lab5)
+- **Lab 6**: [Minimum spanning tree](./2%20semester/labs/lab6)
